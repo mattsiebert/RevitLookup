@@ -53,14 +53,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '2021|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\2021\</OutputPath>
+    <DefineConstants>REVIT2021</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '2020|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\2020\</OutputPath>
+    <DefineConstants>REVIT2020</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '2019|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\2019\</OutputPath>
+    <DefineConstants>REVIT2019</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AdWindows">
