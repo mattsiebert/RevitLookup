@@ -65,6 +65,11 @@
     <OutputPath>bin\2019\</OutputPath>
     <DefineConstants>REVIT2019</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '2018|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\2018\</OutputPath>
+    <DefineConstants>REVIT2018</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AdWindows">
       <HintPath>C:\Program Files\Autodesk\Revit $(Configuration)\AdWindows.dll</HintPath>
