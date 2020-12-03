@@ -28,7 +28,14 @@ namespace RevitLookup.Snoop.CollectorExts
             {
                 var element = (Element) elem;
 
-                return DataTypeInfoHelper.CreateFrom(application, methodInfo, element.GetDependentElements(null), element);
+                try
+                {
+                    return DataTypeInfoHelper.CreateFrom(application, methodInfo, element.GetDependentElements(null), element);
+                }
+                catch (Autodesk.Revit.Exceptions.ArgumentNullException ex)
+                {
+                    return new Data.Exception(methodInfo.Name, ex);
+                }
             }
 
             if (declaringType == typeof (Element) && methodInfo.Name == nameof(Element.GetPhaseStatus))
